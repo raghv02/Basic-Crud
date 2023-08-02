@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #000; /* Black text on light gray background */
+}
+
+tr:nth-child(even) {
+  background-color: #dcdcdc; /* Light Gray */
+}
+
+tr:nth-child(odd) {
+  background-color: #000080; /* Navy Blue */
+  color: #fff; /* White text on navy blue background */
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <h1>USER DETAILS</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach((user, index) => { %>
+          <tr <%= index % 2 === 0 ? 'style="background-color: #000080; color: #fff;"' : 'style="background-color: #dcdcdc; color: #000;"' %>>
+            <td><%= user.idusers %></td>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.age %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

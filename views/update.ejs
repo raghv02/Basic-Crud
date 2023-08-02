@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update User Details</title>
+  <style>
+    /* Center the content */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .update-form {
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .update-form h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    .update-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #000;
+      font-weight: bold;
+    }
+    .update-form input[type="text"],
+    .update-form input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .update-form button[type="submit"] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .update-form button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="update-form">
+    <h1>UPDATE USER DETAILS</h1>
+    <form action="/update/<%= user.idusers %>" method="post">
+      <input type="hidden" name="idusers" value="<%= user[0].idusers %>">
+      <label for="name">Name:</label>
+      <input type="text" name="name" placeholder="Enter Name" value="<%= user[0].name %>">
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="Enter Email" value="<%= user[0].email %>">
+      <label for="age">Age:</label>
+      <input type="text" name="age" placeholder="Enter Age" value="<%= user[0].age %>">
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</body>
+</html>
+

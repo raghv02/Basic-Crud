@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white; /* White background */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: white; /* White background for the tab container */
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: blue; /* Blue button */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  margin: 5px; /* Add some space between tabs */
+}
+
+.tab:hover {
+  background-color: #0073e6; /* Darker blue on hover */
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid gray;
+  background-color: white; /* White background for tab content */
+  border-radius: 5px;
+  margin-top: 10px; /* Add some space between tab content and tabs */
+}
+
+.tab-content:first-child {
+  display: block;
+}

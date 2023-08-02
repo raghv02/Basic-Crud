@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: pink; /* Pink background */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white; /* White background for input container */
+  border: 2px solid pink; /* Pink border for input container */
+  padding: 20px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 10px; /* Add some space between tab container and input container */
+}
+
+.input-container label {
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 300px; /* Broader input boxes */
+  border: 2px solid blue; /* Blue border for input boxes */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.input-container button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: blue; /* Blue submit button */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+}
